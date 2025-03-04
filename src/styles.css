@@ -1,0 +1,14 @@
+.carousel-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  

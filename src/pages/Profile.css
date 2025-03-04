@@ -1,0 +1,45 @@
+/* Profile Page Styles */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  font-size: 16px;
+}
+
+.form-container button {
+  background-color: #4e73df;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #2e59d9;
+}
+
+.form-container button:active {
+  background-color: #1a3d7c;
+}
