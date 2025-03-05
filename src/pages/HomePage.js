@@ -9,7 +9,6 @@ import { PieChart, Pie, Tooltip, Cell, BarChart, Bar, XAxis, YAxis, CartesianGri
 const HomePage = () => {
   const [treatments, setTreatments] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  // const [insuranceSearchTerm, setInsuranceSearchTerm] = useState('');
   const [showInsuranceChart, setShowInsuranceChart] = useState(false);
   const [showHospitalChart, setShowHospitalChart] = useState(false);
   const [hospitalData, setHospitalData] = useState([]);
