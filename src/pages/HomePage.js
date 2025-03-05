@@ -100,11 +100,11 @@ const HomePage = () => {
     value: groupByInsuranceProvider(filteredTreatments)[provider]
   }));
 
-  const hospitalDataFull = Object.keys(groupByHospital(filteredHospitalTreatments)).map(hospital => ({
-    name: hospital,
-    value: groupByHospital(filteredHospitalTreatments)[hospital],
-    insuranceProvider: filteredHospitalTreatments.find(treatment => treatment.hospital === hospital)?.insurance_provider || ''
-  }));
+  // const hospitalDataFull = Object.keys(groupByHospital(filteredHospitalTreatments)).map(hospital => ({
+  //   name: hospital,
+  //   value: groupByHospital(filteredHospitalTreatments)[hospital],
+  //   insuranceProvider: filteredHospitalTreatments.find(treatment => treatment.hospital === hospital)?.insurance_provider || ''
+  // }));
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF'];
 
