@@ -69,9 +69,9 @@ const HomePage = () => {
     treatment.medical_Condition.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const filteredHospitalTreatments = filteredTreatments.filter(treatment =>
-    treatment.insurance_provider.toLowerCase().includes(insuranceSearchTerm.toLowerCase())
-  );
+  // const filteredHospitalTreatments = filteredTreatments.filter(treatment =>
+  //   treatment.insurance_provider.toLowerCase().includes(insuranceSearchTerm.toLowerCase())
+  // );
 
   const groupByInsuranceProvider = (treatments) => {
     return treatments.reduce((acc, treatment) => {
