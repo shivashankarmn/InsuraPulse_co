@@ -8,6 +8,8 @@ import { PieChart, Pie, Tooltip, Cell, BarChart, Bar, XAxis, YAxis, CartesianGri
 
 const HomePage = () => {
   const [treatments, setTreatments] = useState([]);
+  const [hospitalDataFull, setHospitalDataFull] = useState([]);
+
   const [searchTerm, setSearchTerm] = useState('');
   const [showInsuranceChart, setShowInsuranceChart] = useState(false);
   const [showHospitalChart, setShowHospitalChart] = useState(false);
@@ -69,9 +71,9 @@ const HomePage = () => {
     treatment.medical_Condition.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // const filteredHospitalTreatments = filteredTreatments.filter(treatment =>
-  //   treatment.insurance_provider.toLowerCase().includes(insuranceSearchTerm.toLowerCase())
-  // );
+  const filteredHospitalTreatments = filteredTreatments.filter(treatment =>
+    treatment.insurance_provider.toLowerCase().includes(insuranceSearchTerm.toLowerCase())
+  );
 
   const groupByInsuranceProvider = (treatments) => {
     return treatments.reduce((acc, treatment) => {
@@ -100,11 +102,11 @@ const HomePage = () => {
     value: groupByInsuranceProvider(filteredTreatments)[provider]
   }));
 
-  // const hospitalDataFull = Object.keys(groupByHospital(filteredHospitalTreatments)).map(hospital => ({
-  //   name: hospital,
-  //   value: groupByHospital(filteredHospitalTreatments)[hospital],
-  //   insuranceProvider: filteredHospitalTreatments.find(treatment => treatment.hospital === hospital)?.insurance_provider || ''
-  // }));
+  const hospitalDataFull = Object.keys(groupByHospital(filteredHospitalTreatments)).map(hospital => ({
+    name: hospital,
+    value: groupByHospital(filteredHospitalTreatments)[hospital],
+    insuranceProvider: filteredHospitalTreatments.find(treatment => treatment.hospital === hospital)?.insurance_provider || ''
+  }));
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF'];
 
@@ -202,7 +204,7 @@ const HomePage = () => {
         {/* Buttons */}
         <div className="text-center mb-5">
           <button className="btn btn-primary me-3" onClick={() => { setShowInsuranceChart(true); setShowHospitalChart(false); }}>Insurance Chart</button>
-          // <button className="btn btn-secondary" onClick={() => { setShowInsuranceChart(false); setShowHospitalChart(true); setHospitalData(hospitalDataFull.slice(0, 20)); }}>Hospital Chart</button>
+          <button className="btn btn-secondary" onClick={() => { setShowInsuranceChart(false); setShowHospitalChart(true); setHospitalData(hospitalDataFull.slice(0, 20)); }}>Hospital Chart</button>
         </div>
 
         
