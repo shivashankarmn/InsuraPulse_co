@@ -202,7 +202,7 @@ const HomePage = () => {
         {/* Buttons */}
         <div className="text-center mb-5">
           <button className="btn btn-primary me-3" onClick={() => { setShowInsuranceChart(true); setShowHospitalChart(false); }}>Insurance Chart</button>
-          <button className="btn btn-secondary" onClick={() => { setShowInsuranceChart(false); setShowHospitalChart(true); setHospitalData(hospitalDataFull.slice(0, 20)); }}>Hospital Chart</button>
+          // <button className="btn btn-secondary" onClick={() => { setShowInsuranceChart(false); setShowHospitalChart(true); setHospitalData(hospitalDataFull.slice(0, 20)); }}>Hospital Chart</button>
         </div>
 
         
